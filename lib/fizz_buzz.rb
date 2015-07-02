@@ -1,8 +1,6 @@
 class FizzBuzz
   def value(number)
-    return "FizzBuzz" if number % 15 == 0
-    return "Fizz" if number % 3 == 0
-    return "Buzz" if number % 5 == 0
-    number.to_s
+    fizz_buzz_hash = {3 => 'Fizz', 6 => 'Fizz', 9 => 'Fizz', 12 => 'Fizz',  5 => 'Buzz', 10 => 'Buzz', 0 => 'FizzBuzz'}
+    Hash.new(number.to_s).merge(fizz_buzz_hash)[number % 15]
   end
 end
